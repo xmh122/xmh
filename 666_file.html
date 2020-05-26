@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>工具</title>
+		<style type="text/css">
+			p .tool {
+				color: green;
+				position: relative;
+			}
+			P .tool::after {
+				content: attr(title);
+				word-break: keep-all;
+				position: absolute;
+				padding: 4px 16px ;
+				color: #fff;
+				background-color: #000000;
+				left: calc(100% + 60px);
+				top: 3px;
+				border: 1px solid black;
+				opacity: 0;
+				transition: all 1s;
+			}
+			p .tool:hover::after {
+				opacity: 1;
+				left: calc(100% + 8px);
+			p .tool::before {
+				content: "";
+				width: 0;
+				height: 0;
+				border: 10px solid transparent;
+				border-right-color: black;
+				position: absolute;
+				z-index: 2;
+				left: calc(100% + 40px);
+				top: 2px;
+				opacity: 0;
+				transition: all 1s;
+			}
+			p .tool:hover::before {
+				opacity: 1;
+				left: calc(100% - 11px);
+			}
+		</style>				
+	</head>
+	<body>
+		<p>好的好的<span title="xmh" class="tooltip">666</span>66666666777777
+		<span title="555" class="tool">共享</span>很难很难</p>
+	</body>
+<ml>
